@@ -16,7 +16,7 @@ class Billete
     }
     mostrar()
     {
-        document.body.appendChild(this.imagen);
+        document.body.appendChild(this.image);
     }
 }
 
@@ -48,14 +48,16 @@ function entregarDinero()
 
         }
     }
-    console.log(entregado)
     if(dinero > 0)
     {
         resultado.innerHTML = "No hay dinero Joven:(";
     }
     else
     {
-        resultado.innerHTML = "entregamos dinero";
+        for (var efectivo of entregado)
+        {
+            efectivo.mostrar();
+        }
     }
 
 }
